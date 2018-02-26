@@ -13,3 +13,5 @@ The libary expects to find `vk.json` and `pk.json` in the parent directory in a 
 
 place in a directory where `../zksnark_element` contains `proof.json` and `vk.json` containg vk.json and proof.json. 
 See examples folder.
+
+To deploy and test verifcation do `node deploy.js` with an ethereum node running on the default port
