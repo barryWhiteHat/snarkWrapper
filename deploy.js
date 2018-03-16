@@ -55,7 +55,7 @@ snark.new(
             proof.c_p,
             proof.h,
             proof.k,
-            proof.input,
+            /*proof.input,*/ [3],
             {from:web3.eth.accounts[1], gas:2000000}))
     }
  })

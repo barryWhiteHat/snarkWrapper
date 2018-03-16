@@ -170,9 +170,8 @@ contract Verifier {
         verifyKey.gammaBeta2 = Pairing.G2Point(gammaBeta2_1, gammaBeta2_2);
         verifyKey.Z = Pairing.G2Point(Z1,Z2);
 //        verifyKey.IC = new Pairing.G1Point[](1);
-
-        verifyKey.IC.push(Pairing.G1Point(input[0], input[1])); 
-
+        for (uint i = 0; i < input.length; i=i+2)
+            verifyKey.IC.push(Pairing.G1Point(input[i], input[i+1])); 
     }
 
    function verify(uint[] input, Proof proof) internal returns (uint) {
